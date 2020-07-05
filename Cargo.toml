@@ -57,3 +57,7 @@ console_error_panic_hook = "0.1.5"
 futures = "0.1.27"
 js-sys = "0.3.40"
 wasm-bindgen-futures = "0.3.22"
+
+[profile.release]
+lto = true
+opt-level = 3
