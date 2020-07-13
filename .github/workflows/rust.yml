@@ -1,4 +1,4 @@
-name: Template Test & Build
+name: Template Build
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         node_version: ['10', '12']
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest]
 
     steps:
     - uses: actions/checkout@v1
@@ -28,4 +28,4 @@ jobs:
     - name: yarn install, build and test
       run: |
         yarn
-        yarn test
+        yarn build
